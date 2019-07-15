@@ -1,11 +1,13 @@
 package controller;
 
+import java.util.Iterator;
+
 public class Controller
 {
 	
 	public void start()
 	{
-		camelCase("hello case");
+		System.out.println(camelCase("hello case    "));
 	}
 	
 	
@@ -13,9 +15,20 @@ public class Controller
 	{
 		String returnMe = "";
 		
-		char charArray[] = str.toCharArray();
-		
-		
+		for(int i = 0; i < str.length(); i++)
+		{
+			if(str.charAt(i) != ' ')
+			{
+				returnMe += (String.valueOf(str.charAt(i)));
+			}
+			else
+			{
+				if(i < str.length() -1 )
+				{
+					returnMe+=(String.valueOf(str.charAt(i+=1)).toUpperCase());
+				}
+			}
+		}
 		
 		return returnMe;
 	}
