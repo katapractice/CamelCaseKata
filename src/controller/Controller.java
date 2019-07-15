@@ -7,7 +7,7 @@ public class Controller
 	
 	public void start()
 	{
-		System.out.println(camelCase("hello case    "));
+		System.out.println(camelCase("ab c"));
 	}
 	
 	
@@ -19,7 +19,14 @@ public class Controller
 		{
 			if(str.charAt(i) != ' ')
 			{
-				returnMe += (String.valueOf(str.charAt(i)));
+				if(i == 0)
+				{
+					returnMe += String.valueOf(str.charAt(i)).toUpperCase();
+				}
+				else
+				{
+					returnMe += (String.valueOf(str.charAt(i)));
+				}
 			}
 			else
 			{
