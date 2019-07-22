@@ -9,7 +9,7 @@ public class Controller
 	
 	public void start()
 	{
-		System.out.println(camelCase("a b  c hello world"));
+		System.out.println(camelCase("Hello case method"));
 	}
 	
 	
@@ -17,8 +17,8 @@ public class Controller
 	{
 		String returnMe = "";
 		String[] wordArray = str.split("");
-		int spaceIndex = 0;
 		
+		int spaceIndex = Arrays.asList(wordArray).indexOf(" ");
 		
 		for(int i = 0; i < wordArray.length; i++)
 		{
@@ -28,6 +28,7 @@ public class Controller
 			}
 			if(wordArray[i].contains(" "))
 			{
+				
 				spaceIndex = i;
 			}
 			else
